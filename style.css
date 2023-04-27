@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.8rem;
+}
+
+body {
+  background-color: hsl(210, 46%, 95%);
+  padding: 5%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+main {
+  margin: 0 auto;
+  border-radius: 20px;
+  background-color: #fff;
+  color: hsl(214, 17%, 51%);
+  position: relative;
+}
+main h2 {
+  color: hsl(217, 19%, 35%);
+  font-weight: 700;
+}
+main section div {
+  padding: 1rem;
+}
+main .image-head img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+main .main-content {
+  padding: 1rem;
+}
+main .main-content .author {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .main-content .author .author-info {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+main .main-content .author span {
+  font-weight: 700;
+  color: hsl(217, 19%, 35%);
+}
+main .main-content .author img {
+  border-radius: 500px;
+  height: 60px;
+}
+main .main-content .author .sharing {
+  border-radius: 500px;
+  border: none;
+  background-color: hsl(210, 46%, 95%);
+  height: 40px;
+  width: 40px;
+  background-image: url(images/icon-share.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 45%;
+  transition: 0.3s ease;
+  z-index: 5;
+}
+main .main-content .author .sharing:hover {
+  background-color: hsl(212, 23%, 69%);
+  cursor: pointer;
+}
+main .main-content .sharing-menu {
+  display: flex;
+  align-items: center;
+  background-color: hsl(214, 17%, 51%);
+  width: 100%;
+  height: 15%;
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  opacity: 0;
+  transition: 0.25s ease;
+}
+main .main-content .sharing-menu .sharing-options {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+}
+main .main-content .sharing-menu .sharing-options img {
+  height: 30px;
+}
+main .main-content .sharing-menu .sharing-options p {
+  color: hsl(212, 23%, 69%);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+main .main-content .sharing-menu-active {
+  bottom: 0;
+  opacity: 1;
+}
+
+@media only screen and (min-width: 700px) {
+  html {
+    font-size: 1rem;
+  }
+  main {
+    display: flex;
+    max-width: 50vw;
+  }
+  main .image-head {
+    width: 40%;
+  }
+  main .main-content {
+    width: 60%;
+  }
+  main .image-head img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 20px;
+  }
+  main .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  main .main-content .sharing-menu {
+    justify-content: center;
+    border-radius: 10px;
+    width: 35%;
+    bottom: 55%;
+    left: 75%;
+  }
+  main .main-content .sharing-menu-active {
+    bottom: 30%;
+  }
+}/*# sourceMappingURL=style.css.map */
