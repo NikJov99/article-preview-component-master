@@ -12,7 +12,7 @@ html {
 
 body {
   background-color: hsl(210, 46%, 95%);
-  padding: 5%;
+  padding: 0 5%;
   height: 100vh;
   display: grid;
   place-items: center;
@@ -71,8 +71,8 @@ main .main-content .author .sharing {
   border-radius: 500px;
   border: none;
   background-color: hsl(210, 46%, 95%);
-  height: 40px;
   width: 40px;
+  height: 40px;
   background-image: url(images/icon-share.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -102,10 +102,11 @@ main .main-content .sharing-menu .sharing-options {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 15px;
+  gap: 10%;
+  flex-shrink: auto;
 }
 main .main-content .sharing-menu .sharing-options img {
-  height: 30px;
+  height: 20px;
 }
 main .main-content .sharing-menu .sharing-options p {
   color: hsl(212, 23%, 69%);
@@ -118,7 +119,7 @@ main .main-content .sharing-menu-active {
   opacity: 1;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 900px) {
   html {
     font-size: 1rem;
   }
@@ -145,12 +146,34 @@ main .main-content .sharing-menu-active {
     flex-direction: column;
     justify-content: space-between;
   }
+  main .main-content .sharing {
+    position: relative;
+  }
   main .main-content .sharing-menu {
+    position: absolute;
     justify-content: center;
+    padding: 1rem;
     border-radius: 10px;
-    width: 35%;
-    bottom: 55%;
-    left: 75%;
+    width: auto;
+    height: auto;
+    bottom: 100%;
+    left: 100%;
+    transform: translateX(-70%);
+  }
+  main .main-content .sharing-menu .sharing-options {
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+  }
+  main .main-content .sharing-menu .triangle {
+    padding: 0;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid hsl(214, 17%, 51%);
+    position: absolute;
+    top: 100%;
   }
   main .main-content .sharing-menu-active {
     bottom: 30%;
